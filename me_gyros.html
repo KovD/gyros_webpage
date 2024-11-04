@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyros</title>
+    <link rel="stylesheet" href="kerdo.css">
+    <link rel="icon" href="assets/icon.png">
+</head>
+<body>
+    <div class="header">
+        <p>Az egyetlen gyros website</p>
+        <div class="buttons">
+            <a href="index.html">
+                <button>Kezdőlap</button>
+            </a>
+            <a href="history.html" target="_self">
+                <button>Történelme</button>
+            </a>
+            <a href="famous.html">
+                <button>Híres gyrosok</button>
+            </a>
+            <button style="background-color: gray;">Milyen gyros vagyok?</button>
+        </div>  
+    </div>
+    <div class="bobster">
+        <div id="kerdo">
+            <h1>Milyen gyros vagyok?</h1>
+            <p>Töltsd ki a kérdőívet, hogy rájöjj a gyros identitásodra</p>
+            <br>
+            <form onsubmit="event.preventDefault(); kerdo();">
+                <div id="gyroseves" class="kerdes">
+                    <h3>Ön mit tesz ha lát egy Gyrost?</h3>
+                    <label>
+                        <input type="radio" name="gyroseves" value="2">
+                        Megeszem
+                    </label><br>
+                    <label>
+                        <input type="radio" name="gyroseves" value="1">
+                        Elfutok
+                    </label><br>
+                    <label>
+                        <input type="radio" name="gyroseves" value="3">
+                        Elindítom a holokausztot
+                    </label><br>
+                </div>
+                <div id="megeszik" class="kerdes">
+                    <h3>Ön mit tesz ha valaki kérdés nélkül megeszi a gyrosát?</h3>
+                    <label>
+                        <input type="radio" name="megeszik" value="2">
+                        Lemászok a torkán és megeszem.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="megeszik" value="3">
+                        Megeszem az embert.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="megeszik" value="1">
+                        Én kérek elnézést.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="megeszik" value="7">
+                        "Gyere Lacika, nem bántalak!"
+                    </label><br>
+                </div>
+                <div id="szosz" class="kerdes">
+                    <h3>Ön ha gyros lenne, milyen szósz lenne magán?</h3>
+                    <label>
+                        <input type="radio" name="szosz" value="4">
+                        Bazsalikomos kecskesajtszósz, darált mákkal.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="szosz" value="1">
+                        Kapros
+                    </label><br>
+                    <label>
+                        <input type="radio" name="szosz" value="1">
+                        Fokhagymás
+                    </label><br>
+                    <label>
+                        <input type="radio" name="szosz" value="2">
+                        Majonéz
+                    </label><br>
+                    <label>
+                        <input type="radio" name="szosz" value="7">
+                        Csipos ződ szósz a'la Mohamed
+                    </label><br>
+                </div>
+                <div id="hol" class="kerdes">
+                    <h3>Ha ön görög eredetű tejfölös utcaétel lenne, mennyi az 
+                        amennyit még kifizetne saját magáért?</h3>
+                    <label>
+                        <input type="radio" name="hol" value="7">
+                        Egy koszos zsebkendő és egy fél vese
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hol" value="1">
+                        1500 HUF
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hol" value="9">
+                        Fokhagymás, mert azt szeretem
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hol" value="6">
+                        Mennyimvan?
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hol" value="7">
+                        Engem?
+                    </label><br>
+                </div>
+                <div id="hus" class="kerdes">
+                    <h3>Milyen hússal szolgálnák fel ha ön gyros lenne?</h3>
+                    <label>
+                        <input type="radio" name="hus" value="4">
+                        Lóhús
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hus" value="2">
+                        Csirke
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hus" value="3">
+                        Marha
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hus" value="6">
+                        Kóser sertés-szárny
+                    </label><br>
+                    <label>
+                        <input type="radio" name="hus" value="0">
+                        Engem?
+                    </label><br>
+                </div>
+                <div id="jollak" class="kerdes">
+                    <h3>Ha ön gyros lenne, és nagyon éhes lenne, és csak magát lehetne kapni, akkor jóllakna
+                        magával?
+                    </h3>
+                    <label>
+                        <input type="radio" name="jollak" value="3">
+                        Persze!
+                    </label><br>
+                    <input type="radio" name="jollak" value="0">
+                        Nem
+                    </label><br>
+                    <input type="radio" name="jollak" value="1">
+                        Jézus a válasz mindenre
+                    </label><br>
+                </div>
+                <div id="ingyen" class="kerdes">
+                    <h3>Mi lenne az ön lelkiismeretekben duzzadó igazi reakciója arra
+                        az érdeklődő kérdésre, hogy ön elfogadna-e egy finom ingyenesen megkaparintható
+                        gyroslehetőséggel élne-e?
+                    </h3>
+                    <label>
+                        <input type="radio" name="ingyen" value="1">
+                        Milyen csodás ez a nap!
+                    </label><br>
+                    <label>
+                        <input type="radio" name="ingyen" value="13">
+                        Köszönöm kedves kérdésedet, de nem.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="ingyen" value="2">
+                        Igen
+                    </label><br>
+                </div>
+                <div id="jobb" class="kerdes">
+                    <h3>Ennél jobb oldalt tud?</h3>
+                    <label>
+                        <input type="radio" name="jobb" value="0">
+                        Ennék hát!
+                    </label><br>
+                </div>
+                <div class="submit_button">
+                    <button id="submit">Küldés</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="animations.js"></script>
+    <script src="kerdo.js"></script>
+</body>
+</html>

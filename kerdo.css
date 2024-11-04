@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #99f3ff;
+    cursor: url('assets/cursor.png'), auto;
+}
+
+.header {
+    background-color: black;
+    margin:  0;
+    width: 100vw;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header p {
+    font-size: 50px;
+    font-style: oblique;
+    color: white;
+    padding: 20px;
+}
+
+.header .buttons {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header button {
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px;
+    cursor: url('assets/cursor_point.png'), pointer;
+}
+
+.bobster {
+    margin: 20px;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+ul {
+    list-style-image: url('assets/icon.png');
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#kerdo {
+    background-color: white;
+    box-shadow: 0px 2px 3px black;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.submit_button {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.kerdes {
+    padding: 10px;
+    margin: 5px;
+    padding-top: 5px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    border: 3px inset rgb(187, 187, 187);
+}
+
+h3 {
+    margin: 0px;
+}
+
+input, label{
+    cursor: url("assets/cursor_point.png"), pointer;
+}
+
+.error {
+    background-color: rgb(243, 119, 119);
+    border-color: rgb(201, 47, 47);
+}
+
+@media screen and (max-width: 500px){
+
+    .header {
+        display: block;
+    }
+
+    .header .buttons {
+        display: block;
+        width: 80vw;
+        align-self: center;
+        margin: auto;
+    }
+
+    .kerdes {
+        padding: 5px;
+        margin: 3px;
+    }
+}

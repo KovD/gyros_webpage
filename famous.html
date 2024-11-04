@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyros</title>
+    <link rel="stylesheet" href="famous.css">
+    <link rel="icon" href="assets/icon.png">
+</head>
+<body>
+    <div id="popup" class="hidden">
+    </div>
+    <div class="header">
+        <p>Az egyetlen gyros website</p>
+        <div class = "buttons">
+            <a href="index.html">
+                <button>Kezdőlap</button>
+            </a>
+            <a href="history.html" target="_self">
+                <button>Történelme</button>
+            </a>
+            <button style="background-color: gray;">Híres gyrosok</button>
+            <a href="me_gyros.html">
+                <button>Milyen gyros vagyok?</button>
+            </a>
+        </div>  
+    </div>
+    <div class = "bobster">
+        <div id="box">
+                <img class="profile" src="assets/willy.png" alt="Willy the Gyro" class="border" onclick="speekingBox('western', 'rgb(226, 247, 180)')">
+                <img class="profile" src="assets/dino.png" alt="GYros Dino" class="border" onclick="speekingBox('dino', 'gray')">
+                <img class="profile" src="assets/ww2.png" alt="The hero" class="border" onclick="speekingBox('ww2', 'rgb(255, 82, 82)')">
+                <img class="profile" src="assets/knight.png" alt="The hero" class="border" onclick="speekingBox('knight', 'gold')">
+        </div>
+    </div> 
+
+    <script src="animations.js"></script>
+</body>
+</html>
