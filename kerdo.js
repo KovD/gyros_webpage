@@ -1,20 +1,38 @@
 const kerdo = () => {
-
     let divs = document.querySelectorAll("#kerdo form .kerdes");
-    let sum = 0
+    let suma = 0
 
     if (check(divs)) {
         for(let element of divs) {
-            sum += kiert(element.id)
+            suma += kiert(element.id)
         }
-        console.log("Kiválasztott válasz:", sum);
+        kiertekeles.hidden = false
+        submit.innerText = "újrapróbálás"
+        submit.setAttribute("onclick", "location.reload()")
+        if (suma < sum * 0.3) { 
+            kiertekeles.getElementsByTagName("p")[0].innerHTML = "Mindig megbizható vagy, és mindig jólesel, ha hajnalban fut össze veled az ember, ha egy étteremben, a legjobb vagy."
+            kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Jó kis csipos"
+            kiertekeles.getElementsByTagName("img")[0].setAttribute("src", "assets/gyroses/csipos.jpg")
+        }else if (suma > 0.3 * sum && suma < sum * 0.5) {
+            kiertekeles.getElementsByTagName("p")[0].innerHTML = "Te nagyon sokba fogsz kerülni annak aki téged választ, és valószínűleg nem is leszel elég, de az a pár pillanat minden kincsel fel fog érni."
+            kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Luxus gyros"
+            kiertekeles.getElementsByTagName("img")[0].setAttribute("src", "assets/gyroses/fancy-gyros.png")
+        }else if (suma > 0.5 * sum && suma < sum * 0.8) {
+                kiertekeles.getElementsByTagName("p")[0].innerHTML = "Lehet hogy nem te vagy a legszebb gyros a vidéken, de szeretettel készültél, és szeretettel leszel is elfogyasztva, akármilyen vagy."
+                kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Kolis gyros"
+                kiertekeles.getElementsByTagName("img")[0].setAttribute("src", "assets/gyroses/kolis.png")
+        }else{
+            kiertekeles.getElementsByTagName("p")[0].innerHTML = "Mindig a legkésőbb érkezel, de sohasem okozol csalódást (akkor). A másnap viszont már elrepül a varázsod"
+            kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Aluljárós"
+            kiertekeles.getElementsByTagName("img")[0].setAttribute("src", "assets/gyroses/patkany.jpg")
+        }
     }else {
         console.log("Valami nincs kitöltve")
     }
-
-
-    //console.log(asd)
 }
+
+
+
 
 const kiert = (name) => {
     const from = document.getElementsByName(name);
@@ -48,3 +66,24 @@ const check = (array) =>{
 
     return good
 }
+
+let inputs = document.querySelectorAll("#kerdo form .kerdes label input");
+let divs = document.querySelectorAll("#kerdo form .kerdes");
+let kiertekeles = document.getElementById("kiertekeles");
+let submit = document.getElementById("submit");
+
+let max = []
+let sum = 0
+
+for (let div of divs) {
+    for(let input of inputs){
+        if(div.id == input.name){
+            max.push(input.value)
+        }
+    }
+    let maxElement = Math.max(...max);
+    sum += maxElement
+    max = []
+}
+
+console.log(sum)
