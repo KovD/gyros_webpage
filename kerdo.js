@@ -35,6 +35,11 @@ const kerdo = () => {
             kiertekeles.getElementsByTagName("p")[0].innerHTML = "A gyrosok sorából.... igen kilógsz, de jó úton haladsz ahhoz, hogy talán elfogadható étek légy. Csak el kell hanyagolnod pár rossz szokást. Mint hogy kutyábólj készülj"
             kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Kínai gyros"
             kiertekeles.getElementsByTagName("img")[0].setAttribute("src", "assets/gyroses/kutyagyros.png")
+        }else if (suma > 0.8 * sum && suma < sum * 0.9) {
+            kiertekeles.getElementsByTagName("p")[0].innerHTML = "Te vagy a látszat csal deffiníciója. Elhiheted másokkal, hogy milyen finom vagy, ami igaz, viszont akik nem téged keresnek, azoknak hatalmas csalódás leszel. De akik téged keresnek azoknak örökké a szívébe fogsz élni."
+            kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Vegán gyros"
+            kiertekeles.getElementsByTagName("img")[0].setAttribute("src", "assets/gyroses/vegan.png")
+        
         }else{
             kiertekeles.getElementsByTagName("p")[0].innerHTML = "Mindig a legkésőbb érkezel, de sohasem okozol csalódást (akkor). A másnap viszont már elrepül a varázsod"
             kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Aluljárós"
