@@ -29,7 +29,7 @@
             <h1>Milyen gyros vagyok?</h1>
             <p>Töltsd ki a kérdőívet, hogy rájöjj a gyros identitásodra</p>
             <br>
-            <form onsubmit="event.preventDefault(); kerdo();">
+            <form onsubmit="event.preventDefault();"  id="form">
                 <div id="gyroseves" class="kerdes">
                     <h3>Ön mit tesz ha lát egy Gyrost?</h3>
                     <label>
@@ -150,12 +150,15 @@
                         <input type="radio" name="jollak" value="3">
                         Persze!
                     </label><br>
+                    <label>
                     <input type="radio" name="jollak" value="0">
                         Nem
                     </label><br>
+                    <label>
                     <input type="radio" name="jollak" value="4">
                         Kettő kellene belőlem
                     </label><br>
+                    <label>
                     <input type="radio" name="jollak" value="1">
                         Jézus a válasz mindenre
                     </label><br>
@@ -282,15 +285,15 @@
                         Ennék hát!
                     </label><br>
                 </div>
-                <div id="kiertekeles" hidden>
-                    <img class="kepcske">
-                    <h3></h3>
-                    <p></p>
-                </div>
-                <div class="submit_button">
-                    <button id="submit">Küldés</button>
-                </div>
             </form>
+            <div id="kiertekeles" hidden>
+                <img class="kepcske">
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="submit_button">
+                <button id="submit" onclick="kerdo()">Küldés</button>
+            </div>
         </div>
     </div>
     

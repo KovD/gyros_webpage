@@ -1,5 +1,6 @@
 const kerdo = () => {
     let divs = document.querySelectorAll("#kerdo form .kerdes");
+    let form = document.getElementById("form")
     let suma = 0
 
     if (check(divs)) {
@@ -9,6 +10,7 @@ const kerdo = () => {
         kiertekeles.hidden = false
         submit.innerText = "újrapróbálás"
         submit.setAttribute("onclick", "location.reload()")
+        form.hidden = true
         if (suma < sum * 0.3) { 
             kiertekeles.getElementsByTagName("p")[0].innerHTML = "Mindig megbizható vagy, és mindig jólesel, ha hajnalban fut össze veled az ember, ha egy étteremben, a legjobb vagy."
             kiertekeles.getElementsByTagName("h3")[0].innerHTML = "Jó kis csipos"

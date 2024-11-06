@@ -62,3 +62,15 @@ input, label{
     box-shadow: 1px 3px 4px black;
     width: 30%;
 }
+
+@media screen and (max-width: 500px){
+    #kerdo {
+        background-color: white;
+        box-shadow: 0px 2px 3px black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .kepcske {
+        width: 60%;
+    }
+}
